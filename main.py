@@ -29,3 +29,9 @@ chat_template = ChatPromptTemplate.from_messages(
 
 llm = ChatOpenAI()
 llm(chat_template.format_messages(text="google.com"))
+
+def whoisInfo(url_str: str):
+    w = whois.whois(url_str)
+    return w
+
+print(whoisInfo("google.com"))
